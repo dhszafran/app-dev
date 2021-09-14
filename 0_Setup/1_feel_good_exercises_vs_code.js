@@ -35,13 +35,13 @@
 // On Mac : Shift + Option + F
 // On Linux : Ctrl + Shift + I
 
-let a=              1234    ;
-   a++;
-                if (  a > 123 ) {
-a--;
-        }
-                                              else a++
-        console.log(a);
+let a = 1234;
+a++;
+if (a > 123) {
+    a--;
+}
+else a++
+console.log(a);
 
 // Nothing happened? 
 // If so, your code (technically my code, if you just cloned it)
@@ -84,10 +84,10 @@ a--;
 // Hint: follow the pattern.
 a = 1
 b = 2
-c .= 3
+c = 3
 
 // Hint: This function has no name following the word function.
-function(notUsed) {
+function hello(notUsed) {
     console.log('Hello!');
 }
 
@@ -100,13 +100,14 @@ function(notUsed) {
 
 // a. Auto complete for console.log, On the next line, start typing log.
 // A popup window will show up with suggestion, pick the first one.
-
+log
 // b. Auto complete for a personal note to fix this line of code. Start typing
 // fix.
-
+fix.a
 // c. What are all the other suggestions? VS Code collects and indexes all the
 // words in the projects and suggest them to you as you type. Sometimes
 // annoying, sometimes useful.
+fix.console
 
 // EXERCISE 3. Shorcuts.
 ////////////////////////
@@ -195,7 +196,7 @@ console.log(outcome);
 
 console.log('I want to say it 10 times:');
 for (let i = 0; i < 10; i++) {
-    console.log(i+1 + ': ' + outcome);
+    console.log(i + 1 + ': ' + outcome);
 }
 console.log('Mike drop.');
 
