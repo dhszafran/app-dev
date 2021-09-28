@@ -92,15 +92,19 @@ typeof undefined;
 // of the city of Luzern as reported by Wikipedia Eng. as of 03.06.2020.
 
 // a. Compute (18 + 107) / (5 * 25)
-
+a = (18+107)/(5*25)
+console.log(a)
 // b. Compute the square root of one million.
-
+b = Math.sqrt(1000000)
+console.log(b)
 // c. Take the remainder of the division betwen 123 and 9 squared, minus 1.
-
+c = (123 % Math.pow(9, 2)-1)
+console.log(c)
 // d. Take the integer part of the float number 2.123456789 (need to use Math).
-
+d = Math.floor(2.123456789)
+console.log(d)
 // Now compute:
-a*b*c*d;
+console.log(a*b*c*d);
 
 // EXERCISE 2. Variable Naming.
 ///////////////////////////////
@@ -125,6 +129,7 @@ a*b*c*d;
 // luzernPopulation
 // is probably a good candidate. But the final choice is yours!
 luzernPopulation = a*b*c*d;
+console.log(luzernPopulation)
 
 // EXERCISE 3. Random numbers.
 //////////////////////////////
@@ -132,11 +137,13 @@ luzernPopulation = a*b*c*d;
 // a. Generate a random number between 0 and 1, and store its value
 // in a variable (and pick a proper name for the variable!).
 // Hint. The Math object is your friend .
-
+// random01 = Math.random()
+// console.log(random01)
 
 // b. Update the variable so that the value of the random number is
 // between 0 and the one hundred thoudands.
-
+random01 = Math.floor(Math.random() * 100001)
+console.log(random01)
 
 // EXERCISE 4. Conditionals.
 ////////////////////////////
@@ -148,7 +155,15 @@ luzernPopulation = a*b*c*d;
 // Luzern print "Go Luzern!", if exactly equal print "Are we in the Matrix?",
 // otherwise print "Few but good!"
 // Hint: Use console.log to print.
-
+if (random01 > luzernPopulation) {
+    console.log("Go Luzern!")
+}
+else if (random01 === luzernPopulation) {
+    console.log("Are we in the Matrix?")
+}
+else {
+    console.log("Few but good!")
+}
 
 // EXERCISE 5. String manipulation.
 ///////////////////////////////////
@@ -157,11 +172,14 @@ luzernPopulation = a*b*c*d;
 // named finalStr.
 str1 = "Always remember that you are absolutely unique.";
 str2 = 'Just like everyone else.';
-
+finalStr = str1 + " " + str2
+console.log(finalStr)
 
 // b. Did you remember to add a space between them?
 // If so how many characters is the final string?
-
+// for added space see above!
+console.log(finalStr.length)
+// 72 characters
 
 // c. Did you know that you can also join strings and numbers together?
 // Replace str2 with a new sentence that includes the total population count
@@ -169,7 +187,10 @@ str2 = 'Just like everyone else.';
 // "Just like other X persons in Luzern." (X to be replaced with the count)
 // Then, join it with str1 and update finalStr.
 // Important. String must end with a dot (needed for exercise below).
-
+str1 = "Always remember that you are absolutely unique.";
+str2 = 'Just like the other 82000 persons in Luzern.';
+finalStr = str1 + " " + str2
+console.log(finalStr)
 
 // d. Alternatively, you can specify strings using the backtick sign `
 // which allows for in-string variable substitution.
@@ -179,15 +200,18 @@ str2 = 'Just like everyone else.';
 // in the finalStr variable. Extract a substring which contains only
 // the first part.
 // Hint: Use substring and the length property.
-
+finalStr = finalStr.substring(0, 47)
+console.log(finalStr)
 
 // f. Now shout it loud and make the it upper case.
 // Hint: Use toUpperCase.
-
+finalStr = finalStr.toUpperCase().substring(0, 47)
+console.log(finalStr)
 
 // g. Let's be honest. An upper case sentence must end with an exclamation mark.
 // Replace the dot at the end of the sentence with an exclamation mark.
-
+finalStr = finalStr.replace(".", "!").toUpperCase().substring(0, 47)
+console.log(finalStr)
 
 // EXERCISE 6. Constants.
 /////////////////////////
@@ -196,10 +220,10 @@ str2 = 'Just like everyone else.';
 // the variable finalStr. You do not want anybody to change that string
 // ever again, so you decide it to assign it to constant.
 const myFinalStr = finalStr;
-myFinalStr
+console.log(myFinalStr)
 
 // Now try to change it to something else.
-myFinalStr = 'something else'
+myFinalStr = 'No idea!'
 
 // You should have seen error below. We will later learn that constants behave
 // differently with objects, but for now you are done, you completed the first

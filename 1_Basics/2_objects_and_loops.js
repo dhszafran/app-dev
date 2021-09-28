@@ -48,28 +48,37 @@ typeof null;
 // decided that the type of null is 'object'.
 // Hint. The property name must contain the full name (Brendan Eich), and
 // the property birth must contain the year in which he was born (1961).
-
+let object = {
+    name: "Brendan Eich",
+    year: 1961
+};
 // b. Access the properties of the person object.
-
+console.log(object)
 
 // EXERCISE 2. Add and remove properties to the person object.
 //////////////////////////////////////////////////////
 
 // Now you realize that it makes more sense to split the property 'name' into
 // two: 'first' and 'last' name. Accordingly you delete the propery name.
-
-
+object.first = "Brendan";
+object.last = "Eich";
+delete object.name;
+console.log(object)
 // EXERCISE 3. Create an array of persons.
 //////////////////////////////////////////
 
 // a. Create an array called persons containing three items.
 // You already have Brendan, now add another two inspiring personalities.
 // For example, Pablo Picasso and Napoleon Bonaparte. When are they born?
-
+let persons = [
+    "Brendan",
+    "Francoise",
+    "Helena"
+];
 // b. Count how many elements are in the array.
-
+console.log(persons.length);
 // c. Access the second element of the array.
-
+console.log(persons[1])
 // Arrays are 0-indexed, that is the first element has index 0,
 // the second element 1, and so on.
 
